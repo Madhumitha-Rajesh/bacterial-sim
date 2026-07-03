@@ -1,0 +1,41 @@
+{
+  "E. coli": {
+    "label": "E. coli",
+    "optimalTemp": 37,
+    "tempTolerance": 9,
+    "minTemp": 8,
+    "maxTemp": 46,
+    "baseGrowthRate": 0.85,
+    "lagTime": 1.0,
+    "resistantFraction": 0.0025,
+    "resistantFitnessCost": 0.15,
+    "colorNormal": "#3fae4a",
+    "colorResistant": "#9b4fd6"
+  },
+  "Pseudomonas aeruginosa": {
+    "label": "Pseudomonas aeruginosa",
+    "optimalTemp": 37,
+    "tempTolerance": 8,
+    "minTemp": 4,
+    "maxTemp": 42,
+    "baseGrowthRate": 0.62,
+    "lagTime": 1.6,
+    "resistantFraction": 0.004,
+    "resistantFitnessCost": 0.1,
+    "colorNormal": "#2f9e6b",
+    "colorResistant": "#a855c7"
+  },
+  "Bacillus subtilis": {
+    "label": "Bacillus subtilis",
+    "optimalTemp": 32,
+    "tempTolerance": 10,
+    "minTemp": 5,
+    "maxTemp": 55,
+    "baseGrowthRate": 0.55,
+    "lagTime": 2.0,
+    "resistantFraction": 0.0018,
+    "resistantFitnessCost": 0.2,
+    "colorNormal": "#4caf50",
+    "colorResistant": "#8e44ad"
+  }
+}

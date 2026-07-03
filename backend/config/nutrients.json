@@ -1,0 +1,14 @@
+{
+  "Low": {
+    "carryingCapacity": 320,
+    "growthMultiplier": 0.65
+  },
+  "Medium": {
+    "carryingCapacity": 620,
+    "growthMultiplier": 1.0
+  },
+  "High": {
+    "carryingCapacity": 1000,
+    "growthMultiplier": 1.3
+  }
+}

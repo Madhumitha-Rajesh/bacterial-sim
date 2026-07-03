@@ -1,0 +1,15 @@
+{
+  "species": ["E. coli", "Pseudomonas aeruginosa", "Bacillus subtilis"],
+  "nutrientLevels": ["Low", "Medium", "High"],
+  "antibioticTypes": ["Ampicillin", "Ciprofloxacin", "Streptomycin"],
+  "defaults": {
+    "species": "E. coli",
+    "temperature": 37,
+    "nutrientLevel": "Medium",
+    "antibioticType": "Ampicillin",
+    "antibioticPct": 0,
+    "durationHours": 24
+  },
+  "temperatureRange": { "min": 4, "max": 55 },
+  "antibioticRange": { "min": 0, "max": 100 }
+}

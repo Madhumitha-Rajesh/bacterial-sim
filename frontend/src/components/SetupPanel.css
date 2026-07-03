@@ -1,0 +1,139 @@
+.setup-panel {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  height: fit-content;
+}
+
+.setup-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.field-group {
+  margin-bottom: 16px;
+}
+
+.field-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.field-select,
+.field-input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--color-text);
+  background: #fff;
+  outline: none;
+}
+
+.field-select:focus,
+.field-input:focus {
+  border-color: var(--color-primary);
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+}
+
+.slider-row input[type='range'] {
+  width: 100%;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.slider-value {
+  margin-top: 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: right;
+}
+
+.start-btn {
+  width: 100%;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-top: 4px;
+  transition: background 0.15s ease;
+}
+
+.start-btn:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.start-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  width: 100%;
+  background: #fff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.reset-btn:hover {
+  background: #f7f8fb;
+}
+
+.equipment-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.equipment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.equipment-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: var(--color-text);
+  background: #f8f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 9px 10px;
+}
+
+.equipment-icon {
+  font-size: 14px;
+}
