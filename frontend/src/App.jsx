@@ -127,7 +127,7 @@ export default function App() {
             <button className="dashboard-cta" onClick={() => setView('dashboard')}>
               View Simulation Dynamics Dashboard →
             </button>
-            {!animDone && <span className="cta-hint">Animation in progress — you can still view live data</span>}
+            {!animDone && <span className="cta-hint">Experiment in progress — you can still view live data</span>}
           </div>
         )}
       </main>
