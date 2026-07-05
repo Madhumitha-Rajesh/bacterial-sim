@@ -1,10 +1,23 @@
 const BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
+function getClientId() {
+  let id = localStorage.getItem("client_id");
+
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem("client_id", id);
+  }
+
+  return id;
+}
 export async function runSimulation(params) {
   const response = await fetch(`${BASE_URL}/simulate`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(params),
+    body: JSON.stringify({
+  ...params,
+  client_id: getClientId(),
+}),
   })
 
   if (!response.ok) {
@@ -24,11 +37,15 @@ export async function fetchConfig() {
 }
 
 export async function fetchExperiments(limit = 100) {
-  const response = await fetch(`${BASE_URL}/experiments?limit=${limit}`)
+  const response = await fetch(
+    `${BASE_URL}/experiments?client_id=${getClientId()}&limit=${limit}`
+  )
+
   if (!response.ok) {
     const err = await response.json().catch(() => ({}))
     throw new Error(err.error || 'Failed to load experiment history')
   }
+
   return response.json()
 }
 

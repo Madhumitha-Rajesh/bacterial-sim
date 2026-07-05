@@ -104,12 +104,12 @@ def save_experiment(simulation_result):
     return str(inserted.inserted_id)
 
 
-def list_experiments(limit=100):
+def list_experiments(client_id, limit=100):
     """Return lightweight summaries (no full time series) for the history list."""
     collection = get_collection()
     cursor = (
         collection.find(
-            {},
+    {"client_id": client_id},
             {
                 "species": 1,
                 "parameters": 1,

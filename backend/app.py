@@ -48,6 +48,7 @@ def get_config():
 @app.route("/api/simulate", methods=["POST"])
 def simulate():
     body = request.get_json(silent=True) or {}
+    client_id = body.get("client_id")
 
     required = [
         "species",
@@ -77,6 +78,7 @@ def simulate():
 
     # Best-effort save to history — a simulation should still succeed and be
     # returned to the user even if the database is unreachable/unconfigured.
+    result["client_id"] = client_id
     try:
         result["experimentId"] = db.save_experiment(result)
     except db.DatabaseUnavailable as exc:
@@ -90,7 +92,14 @@ def simulate():
 def experiments_list():
     try:
         limit = int(request.args.get("limit", 100))
-        return jsonify(db.list_experiments(limit=limit))
+        client_id = request.args.get("client_id")
+
+        return jsonify(
+            db.list_experiments(
+                client_id=client_id,
+                limit=limit,
+            )
+        )
     except db.DatabaseUnavailable as exc:
         return jsonify({"error": str(exc)}), 503
     except Exception as exc:  # noqa: BLE001
