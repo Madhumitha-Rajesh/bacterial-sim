@@ -47,6 +47,7 @@ You have two options — pick one:
    `mongodb+srv://user:pass@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority`)
 
 **Option B — Local MongoDB:** install MongoDB Community Server and use
+
 `mongodb://localhost:27017`.
 
 Then, in `backend/`:
